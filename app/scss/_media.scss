@@ -1,0 +1,76 @@
+@media (max-width: 1100px){
+
+    .header{
+        display: flex;
+    }
+    .menu {
+        order: 1;
+    }
+    .menu__list {
+        display: none;
+    }
+
+    .menu__btn {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0;
+        cursor: pointer;
+        
+        display: block;
+        
+    }
+
+    .menu__btn::before,
+    .menu__btn::after {
+        display: block;
+        content: '';
+        width: 24px;
+        height: 2px;
+        background-color: white;
+        
+        margin-bottom: 4px;
+        
+    }
+
+    .menu__btn::after {
+        display: block;
+        margin-bottom: 0;
+        width: 16px;
+        margin-left: auto;
+    }
+
+    .menu__btn__line{
+        display: block;
+        background-color: white;
+        color: white;
+        width: 24px;
+        height: 2px;
+        margin-bottom: 4px;
+    }
+    
+    .header__info{
+        margin: 0 150px;
+    }
+    
+
+    .header__phone{
+        display: none;
+        
+    }
+    
+}
+
+@media (max-width: 700px) {
+    
+    .top__title  {
+        display: none;
+        font-size: 36px;
+        line-height: 45px;
+        color: white;
+        font-family: "SFProDisplay-Semibold", sans-serif;
+        font-weight: 100;
+    }
+}
+
+

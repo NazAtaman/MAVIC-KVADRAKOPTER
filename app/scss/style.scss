@@ -1,0 +1,374 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+@import "media";
+
+
+
+.header {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 30px;
+        font-size: 15px;
+        line-height: 17px;
+        text-transform: uppercase;
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 500;
+    }
+
+    &__logo__mob{
+        display: none;
+    }
+
+    &__btn {
+        color: whitesmoke;
+        background-color: transparent;
+        padding: 6px 28px;
+        border: 1px solid whitesmoke;
+        border-radius: 3px;
+        margin-right: 8px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all .3s;
+
+        margin: 0 auto;
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+
+    &__phone {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 18px;
+            }
+
+
+}
+
+
+
+.menu{
+    &__list__item{
+        display: inline-block;
+        padding-left: 20px;
+        &:first-child{
+            padding-left: 0;
+        }
+    }
+
+    &__list__line{
+        display: none;
+    }
+
+   &__list__phone{
+       display: none;
+   }
+
+  &__btn{
+      display: none;
+  }
+  
+}
+
+
+
+
+.top {
+    
+    background-image: url(../img/first/bg.jpg);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: radial-gradient(45.97% 54.43% at 50% 45.57%, rgba(23, 26, 28, 0) 50.28%, rgba(23, 26, 28, 0.00225974) 50.29%, rgba(4, 5, 5, 0.820343) 58.72%, rgba(5, 5, 6, 0.792703) 80.08%, #000000 87.89%);
+        opacity: 0.4;
+    }
+
+    &__wrapper{
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    &__title{
+        font-weight: 600;
+        font-size: 96px;
+        line-height: 115px;
+        color: white;
+        font-family: "SFProDisplay-Semibold", sans-serif ;
+        font-weight: 600;
+    }
+
+    &__text{
+        padding:25px 0 35px 0;
+        max-width: 325px;
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 150%;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+   
+
+    &__social__item{
+        display: inline-block;
+        margin: 0 25px;
+    } 
+
+
+    &__social__link {
+        opacity: 0.7;
+        transition: all 0.3s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+
+.slider__btn {
+    padding: 16px 26px;
+    
+
+    position: absolute;
+    bottom: -45px;
+    right: 0;
+    z-index: 10;
+    cursor: pointer;
+    background-color: #fcf4f4;
+
+    svg{
+        stroke: black;
+    }
+
+    &__left{
+        right: 60px;
+    }
+
+    &.slick-disabled {
+        background-color: black;
+        svg{
+            stroke: white;
+        }
+    }
+}
+
+
+
+
+.benefits {
+
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+        
+
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 100px;
+
+        &:nth-child(even) {
+            margin-left: 80px;
+            transform: translateY(25px);
+        }
+
+        &:nth-child(3) {
+            margin-left: 25px;
+        }
+
+        &:nth-child(4) {
+            margin-left: 80px;
+        }
+        
+
+    }
+
+
+
+    &__item1,
+    &__item3 {
+        position: relative;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+    }
+
+
+    &__item1{
+    
+        &::before {
+            z-index: 11;
+            height: 48px;
+            width: 250px    ;
+            top: -60px;
+            left: 410px;
+           background-image: url(../img/second/lineF.svg);
+            
+        }
+    }
+
+
+    &__item3{
+        &::before{
+            top: -173px;
+            right: -625px;
+            z-index: 11;
+            height: 40px;
+            width: 450px; 
+            background-image: url(../img/second/line2.svg);
+
+        }
+        &::after{
+            top: -59px;
+            left: 400px;
+            z-index: 11;
+            height: 62px;
+            width: 360px;
+            background-image: url(../img/second/line3.svg);
+
+        }
+    }
+
+    &__item__number {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 41px;
+        color: #FFFFFF;
+        margin-right: 10px;
+            }
+
+    &__item__img{
+        position: relative;
+        margin-right: 32px;
+        
+
+        &::after{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: -12px;
+            right: -12px;
+            width: 190px;
+            height: 130px;
+            border: solid 2px white; 
+        }
+    }
+
+    &__item__info {
+        max-width: 300px;
+    }
+    
+    &__item__title{
+        margin-bottom: 10px;
+        max-width: 140px;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 24px;
+        color: #FFFFFF;
+
+    }
+
+    &__item__text{
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 130%;
+        color: #FFFFFF;
+    }
+}
+
+
+
+.specification {
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+    }  
+
+    &__box {
+        max-width: 280px;
+        position: relative;
+        margin-top: 10px;
+        &::before {
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+    }
+
+
+    &__box2 {
+        margin-top: 140px;
+    }
+
+    &__box4{
+        margin-top: 160px;
+    }
+
+
+
+    &__box__title{
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 28px;
+        color: #FFFFFF;
+
+        margin-bottom: 10px;
+    }
+
+    &__box__text {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 130%;
+        color: #FFFFFF;
+    }
+
+
+}
